@@ -5,7 +5,8 @@ const leftButton = document.getElementById('left-button');
 const rightButton = document.getElementById('right-button');
 const upButton = document.getElementById('up-button');
 const downButton = document.getElementById('down-button');
-
+const loader = document.getElementById('loader');
+const gameContainer = document.getElementById('game-container');
 let player, items, obstacles, puzzles, currentLevel, keysPressed, levelUpMessageTimer;
 
 function initGame() {
@@ -17,6 +18,14 @@ function initGame() {
     keysPressed = {};
     levelUpMessageTimer = 0;
     loadLevel(currentLevel);
+
+    setTimeout(() => {
+        loader.style.display = 'none';
+        gameContainer.style.display = 'flex';
+        
+      }, 3000);
+   
+    
 }
 
 const levels = [
