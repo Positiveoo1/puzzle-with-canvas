@@ -110,22 +110,18 @@ function isColliding(rect1, rect2) {
     );
 }
 
-// Show level up message
 function showLevelUpMessage(level) {
-    levelUpMessageTimer = 60; // Show message for 60 frames
+    levelUpMessageTimer = 60; 
 }
 
-// Handle key down
 window.addEventListener('keydown', (e) => {
     keysPressed[e.key] = true;
 });
 
-// Handle key up
 window.addEventListener('keyup', (e) => {
     keysPressed[e.key] = false;
 });
 
-// Handle touch controls
 leftButton.addEventListener('touchstart', () => keysPressed['Left'] = true);
 leftButton.addEventListener('touchend', () => keysPressed['Left'] = false);
 rightButton.addEventListener('touchstart', () => keysPressed['Right'] = true);
@@ -135,12 +131,10 @@ upButton.addEventListener('touchend', () => keysPressed['Up'] = false);
 downButton.addEventListener('touchstart', () => keysPressed['Down'] = true);
 downButton.addEventListener('touchend', () => keysPressed['Down'] = false);
 
-// Game loop
 function gameLoop() {
     update();
     requestAnimationFrame(gameLoop);
 }
 
-// Initialize and start game
 initGame();
 gameLoop();
