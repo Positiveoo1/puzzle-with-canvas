@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Puzzle game</title>
+</head>
+<body>
+    
+    <div id="game-container">
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <div id="instructions">
+            <h2>Instructions</h2>
+            <p>Use the arrow keys to move the character:</p>
+            <ul>
+                <li><strong>Left Arrow:</strong> Move left</li>
+                <li><strong>Right Arrow:</strong> Move right</li>
+                <li><strong>Up Arrow:</strong> Move up</li>
+                <li><strong>Down Arrow:</strong> Move down</li>
+            </ul>
+            <p>Or use the on-screen buttons on a mobile device.</p>
+            <p>Collect all gold items and solve puzzles to progress to the next level.</p>
+            <p>Avoid obstacles!</p>
+        </div>
+        <div id="level-indicator">Level: 1</div>
+        <div id="controls">
+            <button id="left-button">Left</button>
+            <button id="right-button">Right</button>
+            <button id="up-button">Up</button>
+            <button id="down-button">Down</button>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
